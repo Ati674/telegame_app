@@ -49,4 +49,9 @@ class ParticipantManager extends BaseManager
             $this->flush();
         }
     }
+
+    public function totalTicketNumber()
+    {
+        return $this->objectRepository->countTotalTicketNumber();
+    }
 }

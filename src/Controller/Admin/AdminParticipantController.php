@@ -8,6 +8,7 @@ use App\Manager\ParticipantManager;
 use DateTime;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -105,5 +106,26 @@ class AdminParticipantController extends AbstractController
         }
 
         return $this->redirectToRoute('admin_participant_index');
+    }
+
+    /**
+     * @Route("/validate_payment/{id}", name="ajax_validate_payment")
+     */
+    public function validatePayment(int $id, ParticipantManager $manager, Request $request): JsonResponse
+    {
+        $response = [
+            'type' => 'error'
+        ];
+        if ($request->isXmlHttpRequest()) {
+            /**
+             * @var Participant $participant
+             */
+            $participant = $manager->findById($id);
+            $participant->setIsValid(true);
+            $manager->createOrUpdate($participant);
+            $response['type'] = 'success';
+            return new JsonResponse($response['type'], Response::HTTP_OK);
+        }
+        return new JsonResponse($response['type'], Response::HTTP_NOT_FOUND);
     }
 }

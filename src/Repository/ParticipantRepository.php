@@ -19,6 +19,14 @@ class ParticipantRepository extends ServiceEntityRepository
         parent::__construct($registry, Participant::class);
     }
 
+    public function countTotalTicketNumber()
+    {
+        return $this->createQueryBuilder('p')
+            ->select('sum(p.ticketNumber)')
+            ->getQuery()
+            ->getResult()
+        ;
+    }
     // /**
     //  * @return Participant[] Returns an array of Participant objects
     //  */

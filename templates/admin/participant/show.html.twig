@@ -39,6 +39,12 @@
                     <th>Paiement validé</th>
                     <td>{{ participant.isValid ? '<span class="uk-text-success" uk-icon="check"></span>' : '<span class="uk-text-danger" uk-icon="ban"></span>' }}</td>
                 </tr>
+                <tr>
+                    <th>Image upload</th>
+                    <td>
+                        <img src="{{ asset('assets/images/participants/'~participant.image) }}" width="45" alt="">
+                    </td>
+                </tr>
             </tbody>
         </table>
         <div class="uk-card-footer">

@@ -25,10 +25,12 @@ class AdminController extends AbstractController
     {
         $participants = count($participantManager->findAll());
         $participantsNotValid = count($participantManager->findBy(array('isValid' => false)));
+        $totalTicketNumber = $participantManager->totalTicketNumber();
 
         return $this->render('admin/index.html.twig', array(
             'participants' => $participants,
-            'participantsNotValid' => $participantsNotValid
+            'participantsNotValid' => $participantsNotValid,
+            'totalTicketNumber' => $totalTicketNumber
         ));
     }
 }

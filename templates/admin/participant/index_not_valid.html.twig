@@ -17,6 +17,7 @@
                     <th>Telegram</th>
                     <th>Date de mise à jour</th>
                     <th>Paiement vérifié</th>
+                    <th>Preuve du dépot ?</th>
                     <th>actions</th>
                 </tr>
                 </thead>
@@ -29,7 +30,19 @@
                         <td>{{ participant.ticketNumber }}</td>
                         <td>{{ participant.telegram }}</td>
                         <td>{{ participant.updatedAt|date('d/m/y', 'Europe/Paris') }}</td>
-                        <td>{{ participant.isValid ? '<span class="uk-text-success" uk-icon="check"></span>' : '<span class="uk-text-danger" uk-icon="ban"></span>' }}</td>
+                        <td>
+                            <a href="javascript:;" class="validate_payment" data-url="{{ path('admin_ajax_validate_payment', { 'id' : participant.id }) }}"><span><i class="fas fa-check-square"></i></span></a>
+                            {{ participant.isValid ? '<span class="uk-text-success" uk-icon="check"></span>' : '<span class="uk-text-danger" uk-icon="ban"></span>' }}
+                        </td>
+                        <td>
+                            <div uk-lightbox="animation: slide">
+                                <div>
+                                    <a class="uk-inline" href="{{ asset('assets/images/participants/'~participant.image) }}" data-caption="Caption 3">
+                                        <img src="{{ asset('assets/images/participants/'~participant.image) }}" width="45" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </td>
                         <td>
                             <a href="{{ path('admin_participant_show', {'id': participant.id}) }}"><span><i class="fas fa-file"></i></span></a>
                             <a href="{{ path('admin_participant_edit', {'id': participant.id}) }}"><span><i class="fas fa-cog"></i></span></a>
@@ -38,7 +51,7 @@
                     </tr>
                 {% else %}
                     <tr>
-                        <td colspan="8">Aucun enregistrement</td>
+                        <td colspan="10">Aucun enregistrement</td>
                     </tr>
                 {% endfor %}
                 </tbody>
