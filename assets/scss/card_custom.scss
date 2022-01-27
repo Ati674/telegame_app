@@ -1,0 +1,40 @@
+.uk-card {
+  border-radius: 50px;
+}
+
+.card-paypal {
+  width: 450px;
+  position: relative;
+  left: -38px;
+}
+@media screen and (max-width: 767px) {
+  .card-paypal {
+    width: 300px;
+    left: 37px;
+  }
+}
+
+.card-binance {
+  width: 450px;
+  position: relative;
+  left: -38px;
+}
+@media screen and (max-width: 767px) {
+  .card-binance {
+    width: 300px;
+    left: 37px;
+  }
+}
+
+.card-cb {
+  width: 450px;
+  position: relative;
+  left: -38px;
+}
+@media screen and (max-width: 767px) {
+  .card-cb {
+    width: 300px;
+    left: 37px;
+  }
+}
+

@@ -1,0 +1,263 @@
+@mixin ab-animation--name($type:fadeIn){
+  -webkit-animation-name: $type;
+  animation-name: $type;
+}
+
+@mixin ab-animation--delay($duration:1s){
+  -webkit-animation-delay: $duration;
+  animation-delay: $duration;
+}
+
+@mixin ab-animation--duration($duration:1s){
+  -webkit-animation-duration: $duration;
+  animation-duration: $duration;
+}
+
+.ab-animation {
+  @include ab-animation--duration(1s);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+// Animation Duration
+// -----------------------------------------------
+.ab-animation--duration-infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.ab-animation--duration-01s,
+.ab-animation-hover--duration-01s:hover {
+  @include ab-animation--duration(0.12s);
+
+}
+
+.ab-animation--duration-02s,
+.ab-animation-hover--duration-02s:hover {
+  @include ab-animation--duration(0.2s);
+
+}
+
+.ab-animation--duration-04s,
+.ab-animation-hover--duration-04s:hover {
+  @include ab-animation--duration(0.4s);
+
+}
+
+.ab-animation--duration-08s,
+.ab-animation-hover--duration-08s:hover {
+  @include ab-animation--duration(0.8s);
+
+}
+
+.ab-animation--duration-1s,
+.ab-animation-hover--duration-01s:hover {
+  @include ab-animation--duration(1s);
+
+}
+
+.ab-animation--duration-2s,
+.ab-animation-hover--duration-2s:hover {
+  @include ab-animation--duration(2s);
+
+}
+
+.ab-animation--duration-4s,
+.ab-animation-hover--duration-4s:hover {
+  @include ab-animation--duration(4s);
+
+}
+
+// Animation: Fade In
+// -----------------------------------------------
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.ab-animation--fade-in {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+// Animation: Fade Out
+// -----------------------------------------------
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.ab-animation--fade-out {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+
+// Animation: Fade In Up
+// -----------------------------------------------
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.ab-animation--fade-in-up {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+// Animation: Fade In Down
+// -----------------------------------------------
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.ab-animation--fade-in-down {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+// Animation: Fade In Left
+// -----------------------------------------------
+@-webkit-keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.ab-animation--fade-in-left {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+}
+
+// Animation: Fade In Right
+// -----------------------------------------------
+@-webkit-keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.ab-animation--fade-in-right {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+}

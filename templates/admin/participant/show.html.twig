@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Participant{% endblock %}
+
+{% block body %}
+<div class="uk-card uk-card-default m-4">
+    <div class="uk-card-title">
+        <h3>Participant</h3>
+    </div>
+    <div class="uk-width-1-1 uk-text-left">
+
+        <table class="uk-table">
+            <tbody>
+                <tr>
+                    <th>Id</th>
+                    <td>{{ participant.id }}</td>
+                </tr>
+                <tr>
+                    <th>Nom</th>
+                    <td>{{ participant.name }}</td>
+                </tr>
+                <tr>
+                    <th class="uk-text-top">Email</th>
+                    <td class="uk-text-top">{{ participant.email }}</td>
+                </tr>
+                <tr>
+                    <th class="uk-text-top">Telegram</th>
+                    <td class="uk-text-top">{{ participant.telegram }}</td>
+                </tr>
+                <tr>
+                    <th class="uk-text-top">Nombre de ticket</th>
+                    <td class="uk-text-top">{{ participant.ticketNumber }}</td>
+                </tr>
+                <tr>
+                    <th class="uk-text-top">Date de mise à jour</th>
+                    <td class="uk-text-top">{{ participant.updatedAt|date('m/d/Y', 'Europe/Paris') }}</td>
+                </tr>
+                <tr>
+                    <th>Paiement validé</th>
+                    <td>{{ participant.isValid ? '<span class="uk-text-success" uk-icon="check"></span>' : '<span class="uk-text-danger" uk-icon="ban"></span>' }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="uk-card-footer">
+            <a href="{{ path('admin_participant_index') }}" class="uk-button uk-button-secondary yk-button-secondary uk-align-right">Listes</a>
+
+            <a href="{{ path('admin_participant_edit', {'id': participant.id}) }}" class="uk-button uk-button-primary yk-button-blue uk-align-right">Edition</a>
+
+            {{ include('admin/participant/_delete_form.html.twig') }}
+        </div>
+    </div>
+</div>
+{% endblock %}

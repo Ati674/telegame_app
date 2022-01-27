@@ -1,0 +1,37 @@
+// 1. Import default variables and available mixins.
+
+// 2. Import default variables and available mixins.
+@import "~uikit/src/scss/variables-theme";
+@import "~uikit/src/scss/mixins-theme";
+
+// 3. Your custom mixin overwrites.
+@mixin hook-card() { color: #000; }
+
+// 4. Import UIkit.
+@import "~uikit/src/scss/uikit-theme";
+
+// 5. Import Atilla.
+@import "variables";
+@import "color";
+@import "card_custom";
+@import "animation";
+@import "404";
+@import "uikit";
+@import "header";
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
+// 5. Import Telegame.
+@import "variables";
+@import "color";
+@import "animation";
+@import "global";
+@import "buttons";
+@import "entete";
+@import "navbar";
+@import "layout";
+@import "footer";
+@import "timelines";
+@import "quote";
+@import "404";
+@import "uikit";
+@import "responsive";

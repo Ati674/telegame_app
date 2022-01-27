@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Admin{% endblock %}
+
+{% block body %}
+    <div class="uk-section-small p-5 row">
+        <h1>Dashboard</h1>
+        <hr/>
+        <div class=" uk-child-width-1-1@s uk-child-width-1-3@l" uk-grid>
+            <div>
+                <div class="uk-card uk-card-default uk-card-body">
+                    <h3 class="uk-card-title">Participants</h3>
+                    <p class="uk-heading-xlarge"><a href="{{ path('admin_participant_index') }}">{{ participants }}</a></p>
+                </div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default uk-card-body">
+                    <h3 class="uk-card-title">Participants non vérifié</h3>
+                    <p class="uk-heading-xlarge"><a href="{{ path('admin_participant_not_valid') }}">{{ participantsNotValid }}</a></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
+{% block javascript %}
+{% endblock %}

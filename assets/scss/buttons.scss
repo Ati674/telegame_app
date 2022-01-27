@@ -1,0 +1,80 @@
+/* FRONT */
+.ab-button{
+    border-radius: 5px;
+    border-color: $thirdcolor;
+    border: 1px solid $thirdcolor;
+}
+.ab-button-next-form{
+    border-radius: 25px;
+    box-shadow: 2px 2px;
+    background-color: #FEAE00;
+    border: none;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: white;
+    font-size: 23px;
+    font-weight: bold;
+}
+.ab-button-alt{
+    border-radius: 5px;
+    border-color: $white;
+    border: 1px solid $white;
+}
+
+.ab-button-primary{
+    @extend .ab-button;
+    @extend .ab-color-third;
+}
+.ab-button-primary:hover{
+    @extend .ab-button;
+    @extend .ab-color-white;
+    @extend .ab-background-third;
+    text-decoration: none;
+}
+.ab-button-secondary{
+    @extend .ab-button;
+    @extend .ab-background-third;
+    @extend .ab-color-secondary;
+}
+.ab-button-secondary:hover{
+    @extend .ab-button;
+    @extend .ab-background-third;
+    @extend .ab-color-white;
+    text-decoration: none;
+}
+
+
+.ab-button-four{
+    @extend .ab-button-alt;
+    @extend .ab-color-white;
+    @extend .ab-background-third;
+}
+
+.ab-button-four:hover{
+    @extend .ab-button-alt;
+    @extend .ab-color-white;
+    @extend .ab-background-third;
+    text-decoration: none;
+}
+
+.ab-button-five{
+    @extend .ab-button-alt;
+    @extend .ab-color-moutarde;
+    max-width: 320px;
+    font-size: 1.4rem;
+    z-index: 1;
+    padding: 10px 60px;
+}
+.ab-button-five:hover{
+    @extend .ab-button-alt;
+    @extend .ab-color-moutarde;
+}
+
+.ab-button-five-alt{
+    @extend .ab-button-alt;
+    @extend .ab-color-background-moutarde;
+    max-width: 320px;
+    font-size: 1.4rem;
+    z-index: 1;
+    padding: 10px 60px;
+}

@@ -1,0 +1,107 @@
+$primarycolor:#00998B;
+
+html, body{
+  background-image: none;
+}
+
+.ab-admin{
+
+  header, footer{
+    display: none;
+  }
+
+  h1{
+    color: #000;
+    background-color: transparent;
+    text-align: left;
+  }
+
+  .ab-nav-sticky{
+    background-color: $primarycolor;
+    height: 60px;
+  }
+
+  .ab-pt-20{
+    padding-top: 20px;
+  }
+
+  .ab-pl-20{
+    padding-left: 20px;
+  }
+  .ab-pr-20{
+    padding-right: 20px;
+  }
+
+  .ab-vich-image label{
+    padding: 10px 0;
+  }
+
+  .uk-form-custom input[type=file], .uk-form-custom select{
+    height:20%;
+  }
+  .ab-vich-image a{
+    display: none;
+  }
+
+  .ab-checkbox{
+    width: 16px;
+  }
+
+  .ab-sidebar{
+    color: white;
+    background-color:#1A1F34;
+  }
+  .ab-nav-left > li > a {
+    color: white;
+  }
+
+  .ab-button-blue{
+    background-color: $primarycolor;
+    color: white;
+    border-radius: 5px;
+  }
+
+  .ab-button-blue{
+    background-color: $primarycolor;
+    color: white;
+    border-radius: 5px;
+  }
+
+  .ab-button-secondary{
+    background-color: #000;
+    color: white;
+    border-radius: 5px;
+    margin-right: 5px;
+  }
+
+  .ab-button-canceled{
+    background-color: darkred;
+    color: white;
+    border-radius: 5px;
+    margin-right: 5px;
+  }
+
+  .ab-admin-burger{
+    //display: none;
+    text-align: left;
+  }
+
+  // Fix datables in responsive
+  .dataTables_wrapper table{
+    width: 100% !important;
+  }
+  .dataTables_info, .dataTables_paginate{
+    font-size: 0.7rem;
+  }
+
+  .dataTables_wrapper label input[type=search]{
+   width: 60%;
+  }
+
+}
+
+.ab-background-hero{
+  background-image: -webkit-linear-gradient(top, #1A1F34 0%, #1A1F34 100%), -webkit-linear-gradient(top, #1A1F34 0%, #1A1F34 100%);
+  height: 35vh;
+  padding-top: 13vh;
+}

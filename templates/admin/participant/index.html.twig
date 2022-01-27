@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Participants index{% endblock %}
+
+{% block body %}
+<div class="uk-card uk-card-default m-4">
+    <div class="uk-width-1-1">
+        <h3>Gestion des participants</h3>
+
+        <table id="crud" class="uk-table uk-table-hover uk-table-striped" >
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Email</th>
+                <th>Nombre de ticket</th>
+                <th>Telegram</th>
+                <th>Date de mise à jour</th>
+                <th>Paiement vérifié</th>
+                <th>actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for participant in participants|krshort %}
+                <tr>
+                    <td>{{ participant.id }}</td>
+                    <td>{{ participant.name }}</td>
+                    <td>{{ participant.email }}</td>
+                    <td>{{ participant.ticketNumber }}</td>
+                    <td>{{ participant.telegram }}</td>
+                    <td>{{ participant.updatedAt|date('d/m/y', 'Europe/Paris') }}</td>
+                    <td>{{ participant.isValid ? '<span class="uk-text-success" uk-icon="check"></span>' : '<span class="uk-text-danger" uk-icon="ban"></span>' }}</td>
+                    <td>
+                        <a href="{{ path('admin_participant_show', {'id': participant.id}) }}"><span><i class="fas fa-file"></i></span></a>
+                        <a href="{{ path('admin_participant_edit', {'id': participant.id}) }}"><span><i class="fas fa-cog"></i></span></a>
+                        <a href="{{ path('admin_participant_delete', {'id': participant.id}) }}"><span><i class="fas fa-trash"></i></span></a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="6">Aucun enregistrement</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+        <div class="uk-card-footer">
+            <a href="{{ path('admin_participant_new') }}" class="uk-button uk-button-primary yk-button-blue uk-align-right">Nouveau</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

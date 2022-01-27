@@ -1,0 +1,50 @@
+
+#header-card img {
+    position: relative;
+    z-index: 0;
+    top: 20px;
+    width: 20%;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.header__center {
+    font-size: 2rem;
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-column-gap: 1.2rem;
+    align-items: center;
+}
+
+
+.header__center::before,
+.header__center::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: currentColor;
+}
+
+@media screen and (max-width: 640px) {
+    #header-card {
+        overflow: hidden;
+        height: auto;
+    }
+    #header-card h1 {
+        padding-top: 0;
+        padding-right: 0;
+        padding-bottom: 140px;
+        font-size: 30px;
+        text-align: center;
+    }
+    #header-card img {
+        top: 35px;
+    }
+}

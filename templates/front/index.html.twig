@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Telegame - Participer au tirage aux sorts{% endblock %}
+
+{% block body %}
+    <div class="uk-container uk-margin">
+        <div class="uk-section uk-child-width-expand@s" uk-scrollspy="cls: uk-animation-fade; target: .uk-timeline-item; delay: 300; repeat: false" uk-grid>
+            <div>
+                <h3 class="uk-card-title text-white" style="margin-bottom: -23px;">Paypal</h3>
+                <div class="uk-card uk-card-default uk-card-hover uk-align-center" style="width: 200px; height: 200px;">
+                    <div class="card-body">
+                        <a class="button-rendering-form-paypal" data-path="{{ path('front_render_form_participate') }}" href="javascript:;">
+                            <img data-src="{{ asset('build/images/paypal_logo.PNG') }}" class="pt-4" width="130" height="200" alt="" uk-img>
+                        </a>
+                    </div>
+                </div>
+                <div class="uk-margin-top uk-margin-bottom div-icon-chevron-paypal" style="display: none;">
+                    <span><i class="fas fa-chevron-down fa-3x chevron-card" style="color: white;"></i></span>
+                </div>
+                <div id="form_rendering_paypal" class="col-lg-4" style="display: none;">
+                </div>
+            </div>
+
+            <div>
+                <h3 class="uk-card-title text-white" style="margin-bottom: -23px;">Carte Bancaire</h3>
+                <div class="uk-card uk-card-default uk-card-hover uk-align-center" style="width: 200px; height: 200px;">
+                    <div class="card-body">
+                        <a class="button-rendering-form-cb" data-path="{{ path('front_render_form_participate') }}" href="javascript:;">
+                            <img data-src="{{ asset('build/images/carte_logo_with_visa.png') }}" width="180" height="200" alt="" uk-img>
+                        </a>
+                    </div>
+                </div>
+                <div class="uk-margin-top uk-margin-bottom div-icon-chevron-cb" style="display: none;">
+                    <span><i class="fas fa-chevron-down fa-3x chevron-card" style="color: white;"></i></span>
+                </div>
+                <div id="form_rendering_cb" class="col-lg-4" style="display: none;">
+                </div>
+            </div>
+            <div>
+                <h3 class="uk-card-title text-white" style="margin-bottom: -23px;">Cryptomonnaie
+                </h3>
+                <div class="uk-card uk-card-default uk-card-hover uk-align-center" style="width: 200px; height: 200px;">
+                    <div class="card-body">
+                        <a class="button-rendering-form-binance" data-path="{{ path('front_render_form_participate') }}" href="javascript:;">
+                            <img data-src="{{ asset('build/images/crypto_logo.PNG') }}" alt="Paiement binance" class="pt-4" width="110" height="200" uk-img>
+                        </a>
+                    </div>
+                </div>
+                <div class="uk-margin-top uk-margin-bottom div-icon-chevron-binance" style="display: none;">
+                    <span><i class="fas fa-chevron-down fa-3x chevron-card" style="color: white;"></i></span>
+                </div>
+                <div id="form_rendering_binance" class="col-lg-4" style="display: none;">
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ encore_entry_script_tags('participate') }}
+    {{ encore_entry_script_tags('vue') }}
+{% endblock %}

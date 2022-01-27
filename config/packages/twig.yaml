@@ -1,5 +1,10 @@
 twig:
     default_path: '%kernel.project_dir%/templates'
+    form_themes:
+        - 'uikit3form.html.twig'
+        - 'uikit3table.html.twig'
+    globals:
+        image_article: '%app.path.participant_images%'
 
 when@test:
     twig:

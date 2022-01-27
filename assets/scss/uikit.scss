@@ -1,0 +1,8 @@
+
+.uk-card-badge{
+  top: 15px !important;
+}
+
+.uk-subnav-pill > .uk-active > a{
+  @extend .yk-background-primary !optional;
+}

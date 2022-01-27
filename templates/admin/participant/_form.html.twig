@@ -1,0 +1,34 @@
+{{ form_start(form) }}
+    <div uk-grid>
+        <div>
+            <div class="uk-margin">
+                {{ form_row(form.email) }}
+            </div>
+            <div class="uk-margin">
+                {{ form_widget(form.name) }}
+            </div>
+            <div class="uk-margin">
+                {{ form_row(form.ticketNumber) }}
+            </div>
+            <div class="uk-margin">
+                {{ form_widget(form.telegram) }}
+            </div>
+        </div>
+        <div>
+            <div class="uk-margin ab-vich-image">
+                {% if form.vars.value.image is not null %}
+                    <div><img src="/assets/images/participants/{{ form.vars.value.image }}" class="ab-participant-logo" /> </div>
+                {% endif %}
+                <div uk-form-custom="target: true">
+                {{ form_widget(form.imageFile) }}
+                 <input class="uk-input uk-form-width-medium" type="text" placeholder="Select file" disabled>
+                 <button class="uk-button uk-button-default">Uploader une image</button>
+                </div>
+            </div>
+            <div class="uk-margin uk-child-width-auto">
+                {{ form_widget(form.isValid) }} {{ form_label(form.isValid) }}
+            </div>
+            <button class="uk-button uk-button-primary ab-button-blue uk-align-left m-2">{{ button_label|default('Sauvegarder') }}</button>
+        </div>
+    </div>
+{{ form_end(form) }}

@@ -1,0 +1,62 @@
+.ab-padding-right-10{
+    padding-right: 10px;
+}
+.ab-margin-right-10{
+    margin-right: 10px;
+}
+.ab-padding-10{
+    padding: 10px;
+}
+.ab-padding-lr-10{
+    padding: 0 10px;
+}
+
+.ab-padding-right-20{
+    padding-right: 20px;
+}
+.ab-margin-right-20{
+    margin-right: 20px;
+}
+.ab-padding-20{
+    padding: 20px;
+}
+.ab-padding-lr-20{
+    padding: 0 20px;
+}
+
+.ab-label-default{
+    background-color: $greymisoft !important;
+    color:$greymihard;
+    text-transform: none;
+}
+
+.ab-label-date{
+    background-color: $turquoise !important;
+    color:$white;
+    border-radius: 5px;
+}
+
+.ab-divider-small{
+    text-align: center;
+    color: $turquoise;
+}
+
+
+.ab-box{
+    border-radius: 5px;
+    border-color: $primarycolor;
+    border: 1px solid $primarycolor;
+}
+
+.ab-text-vertical{
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
+.ab-box-primary{
+    @extend .ab-box;
+}
+.ab-box-primary:hover{
+    @extend .ab-box;
+    @extend .ab-background-secondary;
+}

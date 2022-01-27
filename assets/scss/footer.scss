@@ -1,0 +1,66 @@
+#footer {
+    padding: 15px 10px;
+    position: relative;
+    bottom: 0;
+    z-index: 1;
+    font-size: 16px;
+    width: 100%;
+}
+
+#footer a{
+    color:#b1b8d6;
+}
+
+.footer-ul{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-flow: row wrap;
+    -webkit-box-pack: left;
+    justify-content: left;
+    -ms-flex-pack: left;
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    min-width: 0;
+}
+
+.footer-link {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 10px;
+    -webkit-transition: color 0.2s ease;
+    transition: color 0.2s ease;
+}
+
+.footer-link-secodary {
+    display: inline-block;
+    text-decoration: none;
+    padding-left:5px;
+    -webkit-transition: color 0.2s ease;
+    transition: color 0.2s ease;
+    vertical-align: baseline;
+}
+
+.footer-copy {
+    display: inline-block;
+    text-decoration: none;
+    -webkit-transition: color 0.2s ease;
+    transition: color 0.2s ease;
+    padding-right:5px;
+}
+
+.footer-link:hover, .footer-link:focus, .footer-link-secodary:hover, .footer-link-secodary:focus {
+    color:$white;
+}
+
+.footer-copy .uk-icon{
+    vertical-align: text-top;
+}
+
+.ab-hr-footer{
+    border-top-color: #40424b;
+}
+

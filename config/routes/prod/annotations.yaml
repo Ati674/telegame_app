@@ -1,0 +1,9 @@
+main:
+    resource: ../../../src/Controller/Main
+    type: annotation
+    host: 'www.telegame.fr'
+
+admin:
+    resource: ../../../src/Controller/Admin
+    type: annotation
+    host: 'admin.telegame.fr'

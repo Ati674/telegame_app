@@ -1,0 +1,9 @@
+main:
+    resource: "../../../src/Controller/Main"
+    type: annotation
+    host: '127.0.0.1'
+
+admin:
+    resource: '../../../src/Controller/Admin'
+    type: annotation
+    host: 'admin.localhost'
