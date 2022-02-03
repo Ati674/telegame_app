@@ -1,4 +1,5 @@
-{{ form_start(form) }}
+{{ form_start(form, {'enctype': 'multipart/form-data'}) }}
+{{ form_errors(form) }}
     <div uk-grid>
         <div>
             <div class="uk-margin">
@@ -17,7 +18,7 @@
         <div>
             <div class="uk-margin ab-vich-image">
                 {% if form.vars.value.image is not null %}
-                    <div><img src="/assets/images/participants/{{ form.vars.value.image }}" class="ab-participant-logo" /> </div>
+                    <div><img alt="uploaded_file" src="/assets/images/participants/{{ form.vars.value.image }}" class="ab-participant-logo" /> </div>
                 {% endif %}
                 <div uk-form-custom="target: true">
                 {{ form_widget(form.imageFile) }}

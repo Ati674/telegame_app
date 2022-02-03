@@ -3,7 +3,9 @@
     <ul class="uk-navbar-nav uk-dropdown-nav uk-text-left ab-nav-left">
         <li><a href="{{ path('front_home') }}" target="_blank"><span uk-icon="icon: home; ratio:0.7;"></span> Home</a></li>
         <li class="uk-nav-divider"></li>
-        <li class="uk-active"><a href="{{ path('admin_index') }}"><span uk-icon="icon: cog; ratio:0.7;"></span> Dashboard</a></li>
+        <li {% if app.request.attributes.get('_route') == 'admin_index'%}class="active"{% endif %}><a href="{{ path('admin_index') }}"><span uk-icon="icon: cog; ratio:0.7;"></span> Dashboard</a></li>
+        <li class="uk-nav-divider"></li>
+        <li {% if app.request.attributes.get('_route') == 'admin_tirage_'%}class="uk-active"{% endif %}><a href="{{ path('admin_tirage_index') }}"><span uk-icon="icon: clock; ratio:0.7;"></span> Tirage</a></li>
         <li class="uk-nav-divider"></li>
         <li><a href="{{ path('app_logout') }}"><span uk-icon="icon: lock; ratio:0.7;"></span> Logout</a></li>
     </ul>

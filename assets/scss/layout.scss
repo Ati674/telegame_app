@@ -51,12 +51,13 @@ main{
 }
 
 footer{
-  background-color:#1A1F34;
+  background-color: #fafafa;
   color:#b1b8d6;
   //background-image: linear-gradient(to top, #1a1f34, #142d44, #043d51, #004c5a, #005b5d);
 }
 
 a{
+  text-decoration: none;
   @extend .ab-color-third;
 }
 

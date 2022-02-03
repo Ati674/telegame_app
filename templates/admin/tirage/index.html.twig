@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tirages index{% endblock %}
+
+{% block body %}
+    <a href="{{ path('admin_tirage_run') }}">Lancer le tirage</a>
+    <div class="uk-card uk-card-default m-4">
+        <div class="uk-width-1-1">
+            <h3>Gestion des tirages</h3>
+
+            <table id="crud" class="uk-table uk-table-hover uk-table-striped" >
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nom</th>
+                    <th>Date de lancement</th>
+                    <th>Tirage actif</th>
+                    <th>actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for tirage in tirages|krshort %}
+                    <tr>
+                        <td>{{ tirage.id }}</td>
+                        <td>{{ tirage.name }}</td>
+                        <td>{{ tirage.beginDate|date('d/m/y h:m', 'Europe/Paris') }}</td>
+                        <td>{{ tirage.isActive ? '<span class="uk-text-success" uk-icon="check"></span>' : '<span class="uk-text-danger" uk-icon="ban"></span>' }}</td>
+                        <td>
+                            <a href="{{ path('admin_tirage_show', {'id': tirage.id}) }}"><span><i class="fas fa-file"></i></span></a>
+                            <a href="{{ path('admin_tirage_edit', {'id': tirage.id}) }}"><span><i class="fas fa-cog"></i></span></a>
+                            <a href="{{ path('admin_tirage_delete', {'id': tirage.id}) }}"><span><i class="fas fa-trash"></i></span></a>
+                        </td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="6">Aucun enregistrement</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+
+            <div class="uk-card-footer">
+                <a href="{{ path('admin_tirage_new') }}" class="uk-button uk-button-primary ab-button-blue uk-align-right">Nouveau</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

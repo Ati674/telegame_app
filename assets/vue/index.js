@@ -23,6 +23,7 @@ Vue.use(Vuikit)
 Vue.use(VuikitIcons)
 Vue.component("vue-cookie-accept-decline", VueCookieAcceptDecline);
 Vue.config.productionTip = false;
+require('jquery-validation')
 
 const host = window.location.host;
 const parts = host.split('.');

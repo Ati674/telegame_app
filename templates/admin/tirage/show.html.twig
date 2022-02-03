@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tirage{% endblock %}
+
+{% block body %}
+    <div class="uk-card uk-card-default m-4">
+        <div class="uk-card-title">
+            <h3>Tirage</h3>
+        </div>
+        <div class="uk-width-1-1 uk-text-left">
+
+            <table class="uk-table">
+                <tbody>
+                <tr>
+                    <th>Id</th>
+                    <td>{{ tirage.id }}</td>
+                </tr>
+                <tr>
+                    <th>Nom</th>
+                    <td>{{ tirage.name }}</td>
+                </tr>
+                <tr>
+                    <th class="uk-text-top">Date de lancement</th>
+                    <td class="uk-text-top">{{ tirage.beginDate }}</td>
+                </tr>
+                <tr>
+                    <th class="uk-text-top">Tirage en cours</th>
+                    <td class="uk-text-top">{{ tirage.isActive }}</td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="uk-card-footer">
+                <a href="{{ path('admin_tirage_index') }}" class="uk-button uk-button-secondary ab-button-secondary uk-align-right">Listes</a>
+
+                <a href="{{ path('admin_tirage_edit', {'id': tirage.id}) }}" class="uk-button uk-button-primary ab-button-blue uk-align-right">Edition</a>
+
+                {{ include('admin/tirage/_delete_form.html.twig') }}
+            </div>
+        </div>
+    </div>
+{% endblock %}
