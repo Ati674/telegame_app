@@ -4,8 +4,11 @@ namespace App\Entity;
 
 use App\Repository\ParticipantRepository;
 use DateTime;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
@@ -61,6 +64,26 @@ class Participant
      * @ORM\Column(type="datetime")
      */
     private $updatedAt;
+
+    /**
+     * @ORM\ManyToMany(targetEntity=Tirage::class, inversedBy="participants")
+     */
+    private $tirages;
+
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $isSubscribe;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $paymentType;
+
+    public function __construct()
+    {
+        $this->tirages = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -139,22 +162,34 @@ class Participant
         return $this;
     }
 
-    public function getImageFile()
+    /**
+     * Get imageFile
+     *
+     * @return File
+     */
+    public function getImageFile(): ?File
     {
         return $this->imageFile;
     }
 
-    public function setImageFile(File $image = null): void
-    {
-        $this->imageFile = $image;
 
-        // VERY IMPORTANT:
-        // It is required that at least one field changes if you are using Doctrine,
-        // otherwise the event listeners won't be called and the file is lost
-        if ($image) {
-            // if 'updatedAt' is not defined in your entity, use another property
-            $this->updatedAt = new DateTime('now');
+    /**
+     * Set imageFile
+     *
+     * @param File|null $imageFile
+     *
+     * @return Participant
+     */
+    public function setImageFile(File $imageFile = null): Participant
+    {
+        $this->imageFile = $imageFile;
+        if ($this->imageFile instanceof UploadedFile) {
+            // It is required that at least one field changes if you are using doctrine
+            // otherwise the event listeners won't be called and the file is lost
+            $this->updatedAt2 = new \DateTime('now');
         }
+
+        return $this;
     }
 
     public function getUpdatedAt(): ?\DateTime
@@ -165,6 +200,54 @@ class Participant
     public function setUpdatedAt(\DateTime $updatedAt): self
     {
         $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Tirage[]
+     */
+    public function getTirages(): Collection
+    {
+        return $this->tirages;
+    }
+
+    public function addTirage(Tirage $tirage): self
+    {
+        if (!$this->tirages->contains($tirage)) {
+            $this->tirages[] = $tirage;
+        }
+
+        return $this;
+    }
+
+    public function removeTirage(Tirage $tirage): self
+    {
+        $this->tirages->removeElement($tirage);
+
+        return $this;
+    }
+
+    public function getIsSubscribe(): ?bool
+    {
+        return $this->isSubscribe;
+    }
+
+    public function setIsSubscribe(bool $isSubscribe): self
+    {
+        $this->isSubscribe = $isSubscribe;
+
+        return $this;
+    }
+
+    public function getPaymentType(): ?string
+    {
+        return $this->paymentType;
+    }
+
+    public function setPaymentType(?string $paymentType): self
+    {
+        $this->paymentType = $paymentType;
 
         return $this;
     }

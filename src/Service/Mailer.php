@@ -14,22 +14,23 @@ class Mailer
 
     public function __construct(MailerInterface $mailer, $from)
     {
+
         $this->mailer = $mailer;
         $this->from = $from;
     }
 
-    public function sendEmail($subject, $toMail, $view, $variables)
+    public function sendEmail($subject, $toMail, $view, $variables): string
     {
+
         if (!filter_var($toMail, FILTER_VALIDATE_EMAIL)) {
             return "Failed";
         }
         $email = (new TemplatedEmail())
             ->from($this->from)
-            ->to($this->from)
+            ->to($variables[1])
             ->subject($subject)
             ->htmlTemplate("emails/" . $view . ".html.twig")
             ->context(['data' => $variables]);
-
         try {
             $this->mailer->send($email);
             return "Success";

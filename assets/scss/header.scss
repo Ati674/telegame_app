@@ -1,50 +1,95 @@
+#yellow_circle {
+    position: relative;
+    width: 504px;
+    top: -147px;
+    left: -47px;
+}
 
-#header-card img {
+.row-div {
+    height: 350px;
+}
+
+.div-button-social {
+  text-decoration: none;
+}
+
+#yellow_square {
+    position: relative;
+    width: 386px;
+    left: 25px;
+}
+#text_droite {
+    color: white;
+    position: absolute;
+    left: 1220px;
+    font-size: 30px;
+    width: 187px;
+    top: 75px;
+}
+
+#logo_telegame {
     position: relative;
     z-index: 0;
-    top: 20px;
-    width: 20%;
+    top: -467px;
+    width: 242px;
+    left: -53px;
 }
 
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-}
-
-.header__center {
-    font-size: 2rem;
-    display: grid;
-    grid-template-columns: 1fr max-content 1fr;
-    grid-column-gap: 1.2rem;
-    align-items: center;
-}
-
-
-.header__center::before,
-.header__center::after {
-    content: "";
-    display: block;
-    height: 1px;
-    background-color: currentColor;
-}
 
 @media screen and (max-width: 640px) {
-    #header-card {
-        overflow: hidden;
-        height: auto;
+    body {
+        width: 100%;
     }
-    #header-card h1 {
-        padding-top: 0;
-        padding-right: 0;
-        padding-bottom: 140px;
-        font-size: 30px;
-        text-align: center;
+    .header__center {
+        font-size: 10px;
     }
-    #header-card img {
-        top: 35px;
+
+    .header_div {
+        height: 5px;
     }
+
+    #yellow_circle {
+        position: relative;
+        width: 156px;
+        top: -44px;
+        left: 51px;
+    }
+
+    #yellow_square {
+        /* position: relative; */
+        width: 98px;
+        /* height: 152px; */
+        top: -155px;
+        left: 158px;
+    }
+
+    .div-button-social {
+        display:none;
+    }
+
+    .squared-div {
+        height: 0px;
+    }
+
+    #text_droite {
+        color: white;
+        position: absolute;
+        left: 313px;
+        font-size: 10px;
+        width: 65px;
+        top: 18px;
+    }
+
+    #logo_telegame {
+        position: relative;
+        z-index: 0;
+        top: -36px;
+        width: 80px;
+        left: -73px;
+    }
+
+    .row-div {
+        height: 120px;
+    }
+
 }

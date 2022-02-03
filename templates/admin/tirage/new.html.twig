@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Tirage{% endblock %}
+
+{% block body %}
+    <div class="uk-card uk-card-default m-4 p-4">
+        <div class="uk-width-1-1 uk-text-left">
+            <div class="uk-card-title">
+                <h3>Nouveau Tirage</h3>
+            </div>
+
+            {{ include('admin/tirage/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
+
+            <div class="uk-card-footer">
+                <a href="{{ path('admin_tirage_index') }}" class="uk-button ab-button-secondary uk-align-right">Listes</a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -3,7 +3,7 @@
 {% block title %}Telegame - Participer au tirage aux sorts{% endblock %}
 
 {% block body %}
-    <div class="uk-container uk-margin">
+    <div class="uk-container uk-margin pb-5">
         <div class="uk-section uk-child-width-expand@s" uk-scrollspy="cls: uk-animation-fade; target: .uk-timeline-item; delay: 300; repeat: false" uk-grid>
             <div>
                 <h3 class="uk-card-title text-white" style="margin-bottom: -23px;">Paypal</h3>
@@ -54,6 +54,12 @@
             </div>
         </div>
     </div>
+    {% if winner is not null %}
+        <h3 class="text-white">Le gagnant du tirage précédent est : {{ winner.name }}</h3>
+    {% endif %}
+    {% if tirage is not null %}
+        {% include 'front/_countdown.html.twig' %}
+    {% endif %}
 {% endblock %}
 
 {% block javascripts %}

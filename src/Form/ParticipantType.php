@@ -73,7 +73,9 @@ class ParticipantType extends AbstractType
             ))
             ->add('imageFile', VichImageType::class, [
                 'attr' => ['class' => 'uk-input uk-form-width-medium'],
-                'required' => false
+                'required' => false,
+                'allow_delete' => true, // not mandatory, default is true
+                'download_link' => true, // not mandatory, default is true
             ])
         ;
         if (!in_array($request->attributes->get('_route'), ['front_home', 'front_render_form_participate'])) {
@@ -86,7 +88,8 @@ class ParticipantType extends AbstractType
                         'required' => false,
                         'label' => 'Paiement validé'
                     ]
-                );
+                )
+            ;
         }
     }
 

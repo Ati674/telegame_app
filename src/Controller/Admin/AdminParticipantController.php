@@ -15,6 +15,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 /**
  * @Route("/participant", name="admin_")
+ * @IsGranted("ROLE_ADMIN")
  */
 class AdminParticipantController extends AbstractController
 {
@@ -84,7 +85,7 @@ class AdminParticipantController extends AbstractController
             }
             $manager->createOrUpdate($participant);
 
-            return $this->redirectToRoute('admin_participant_index');
+            return $this->redirectToRoute('admin_participant_edit', array('id' => $participant->getId()));
         }
 
         return $this->render('admin/participant/edit.html.twig', [

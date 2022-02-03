@@ -26,6 +26,7 @@ $(document).ready(function () {
                     {
                         props: {
                             typePayment: 'paypal',
+                            ticketNumber: $('#participant_ticketNumber').val()
                         }
                     }),
             }).$mount('#next-button-div')
@@ -55,6 +56,7 @@ $(document).ready(function () {
                     {
                         props: {
                             typePayment: 'cb',
+                            ticketNumber: $('#participant_ticketNumber').val()
                         }
                     }),
             }).$mount('#next-button-div')
@@ -83,16 +85,21 @@ $(document).ready(function () {
             let $binanceNextButton = $('#binance-div—content');
             $binanceNextButton.show()
             $binanceNextButton.click(function (e) {
-                let inputTicketNumber = $('#participant_ticketNumber').val()
-                if (inputTicketNumber === '' || inputTicketNumber < 10) {
-                    alert('Veuillez choisir un nombre de ticket supérieur ou égal à 10 pour le paiement crypto !')
+                if (!$('#form-participate').valid()) {
+                    return;
                 } else {
-                    $('#next-button-binance').hide();
-                    let $save = $('#button-save-binance')
-                    $save.show();
-                    $('#form_first_step').hide();
-                    $('#file_import_binance').show();
+                    let inputTicketNumber = $('#participant_ticketNumber').val()
+                    if (inputTicketNumber === '' || inputTicketNumber < 10) {
+                        alert('Veuillez choisir un nombre de ticket supérieur ou égal à 10 pour le paiement crypto !')
+                    } else {
+                        $('#next-button-binance').hide();
+                        let $save = $('#button-save-binance')
+                        $save.show();
+                        $('#form_first_step').hide();
+                        $('#file_import_binance').show();
+                    }
                 }
+
             });
        }
     });

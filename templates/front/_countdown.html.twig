@@ -1,0 +1,24 @@
+<div class="text-white pt-5">
+    <h3 class="text-white">Prochain tirage au sort dans</h3>
+    <div class="mt-5 uk-grid-small uk-child-width-auto justify-content-center" uk-grid uk-countdown="date: {{ tirage.beginDate|date('c') }}">
+        <div>
+            <div class="uk-countdown-number uk-countdown-days"></div>
+            <div class="uk-countdown-label uk-margin-small uk-text-center uk-visible@s">Jours</div>
+        </div>
+        <div class="uk-countdown-separator">:</div>
+        <div>
+            <div class="uk-countdown-number uk-countdown-hours"></div>
+            <div class="uk-countdown-label uk-margin-small uk-text-center uk-visible@s">Heures</div>
+        </div>
+        <div class="uk-countdown-separator">:</div>
+        <div>
+            <div class="uk-countdown-number uk-countdown-minutes"></div>
+            <div class="uk-countdown-label uk-margin-small uk-text-center uk-visible@s">Minutes</div>
+        </div>
+        <div class="uk-countdown-separator">:</div>
+        <div>
+            <div class="uk-countdown-number uk-countdown-seconds"></div>
+            <div class="uk-countdown-label uk-margin-small uk-text-center uk-visible@s">Secondes</div>
+        </div>
+    </div>
+</div>
