@@ -42,20 +42,14 @@ export default {
         };
     },
     mounted: function() {
-        const script = document.createElement("script");
-        //script.src =
-          //  "https://www.paypal.com/sdk/js?client-id=Ab_pFLt376S1ti82vgTI2tLsykgqerREKLRQkzLJC4I1Fp2qfUnl2aNV8VlWwbZYA1h-IszdIlZV7juL&currency=EUR";
-        // script.addEventListener("load", this.setLoaded);
         loadScript({
-            "client-id": 'Ab_pFLt376S1ti82vgTI2tLsykgqerREKLRQkzLJC4I1Fp2qfUnl2aNV8VlWwbZYA1h-IszdIlZV7juL',
+            "client-id": 'AQkyvOTSZylKuY3dwGhQugbzR2tzknBIoNg44CPX8QMlY_U8IOjmpLzCyjGP1yINqnT_o3cgc89DL1ak',
             "currency" : "EUR",
             "vault" : true,
             "intent" : "subscription"
         }).then((paypal) => {
             this.setLoaded()
-            // start to use the PayPal JS SDK script
         })
-        //document.body.appendChild(script);
         $('#modal_checkout_payment').show();
     },
     methods: {
@@ -83,24 +77,10 @@ export default {
                 },
                 createSubscription: function(data, actions) {
                     return actions.subscription.create({
-                        plan_id: 'P-6R4639460B881225WMH4W3VI',
+                        plan_id: 'P-21U53196GP375404KMH6ZEHY',
                         quantity : ticketNumber
                     });
                 },
-                /*createOrder: (data, actions) => {
-                    console.log(actions)
-                    return actions.order.create({
-                    intent: "subscription",
-                    purchase_units: [
-                        {
-                            description: this.product.description,
-                            amount: {
-                                currency_code: "EUR",
-                                value: this.product.price
-                            }
-                        }
-                    ]});
-                },*/
                 onApprove: async (data, actions) => {
                     const order = await actions.order.capture();
                     let $form = $('#form-participate');
