@@ -20,11 +20,13 @@ final class Version20220129170406 extends AbstractMigration
     public function up(Schema $schema): void
     {
         // this up() migration is auto-generated, please modify it to your needs
+        $this->addSql('SET FOREIGN_KEY_CHECKS=0');
         $this->addSql('ALTER TABLE tirage DROP FOREIGN KEY FK_2A145AFF5DFCD4B8');
         $this->addSql('DROP INDEX IDX_2A145AFF5DFCD4B8 ON tirage');
         $this->addSql('ALTER TABLE tirage DROP winner_id');
         $this->addSql('ALTER TABLE winner DROP INDEX UNIQ_CF6600E82579054, ADD INDEX IDX_CF6600E82579054 (tirage_id)');
         $this->addSql('ALTER TABLE winner CHANGE tirage_id tirage_id INT DEFAULT NULL');
+        $this->addSql('SET FOREIGN_KEY_CHECKS=1');
     }
 
     public function down(Schema $schema): void
