@@ -35,6 +35,9 @@
     left: -53px;
 }
 
+.text-social-button_telegram, .text-social-button_instagram {
+    display: none;
+}
 
 @media screen and (max-width: 640px) {
     body {
@@ -92,4 +95,82 @@
         height: 120px;
     }
 
+    .social-button-footer {
+        font-size: 12px !important;
+    }
+}
+
+@media only screen
+and (device-width: 428px)
+and (device-height: 926px) {
+    body {
+        width: 100%;
+    }
+    .header__center {
+        font-size: 10px;
+    }
+
+    .header_div {
+        height: 5px;
+    }
+
+    #yellow_circle {
+        position: relative;
+        width: 156px;
+        top: -44px;
+        left: 51px;
+    }
+
+    #yellow_square {
+        /* position: relative; */
+        width: 98px;
+        /* height: 152px; */
+        top: -155px;
+        left: 179px;
+    }
+
+    .squared-div {
+        height: 0px;
+    }
+
+    #text_droite {
+        color: white;
+        position: absolute;
+        left: 349px;
+        font-size: 10px;
+        width: 65px;
+        top: 18px;
+    }
+
+    #logo_telegame {
+        position: relative;
+        z-index: 0;
+        top: -36px;
+        width: 80px;
+        left: -73px;
+    }
+
+    .row-div {
+        height: 120px;
+    }
+
+    .text-social-button_telegram, .text-social-button_instagram {
+        display: unset;
+    }
+    .text-social-button_telegram {
+        text-decoration: none;
+        position: absolute;
+        left: 24px;
+        top: 4px;
+        width: 50px;
+        height: 50px;
+    }
+    .text-social-button_instagram {
+        text-decoration: none;
+        position: absolute;
+        left: 27px;
+        top: 68px;
+        width: 50px;
+        height: 50px;
+    }
 }

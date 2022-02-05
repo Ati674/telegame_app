@@ -127,6 +127,7 @@ $(document).ready(function () {
                 // Binance
                 iconBinance.show();
                 formBinance.show().html(response.content);
+                $('#mini-ticket-span').show()
                 break;
             case 'paypal':
                 // CB Component

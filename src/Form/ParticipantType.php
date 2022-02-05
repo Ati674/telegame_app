@@ -65,7 +65,7 @@ class ParticipantType extends AbstractType
                 'attr' => [
                     'class' => 'form-control form-control-sm',
                 ],
-                'label' => 'Nombre de ticket souhaité:',
+                'label' => 'Nombre de tickets souhaités:',
                 'label_attr' => [
                     'class' => 'col-lg-8'
                 ],

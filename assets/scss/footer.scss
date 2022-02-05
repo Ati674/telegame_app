@@ -8,10 +8,6 @@
     width: 100%;
 }
 
-#footer a{
-    color:#b1b8d6;
-}
-
 .footer-ul{
     display: -webkit-box;
     display: -ms-flexbox;
@@ -54,7 +50,7 @@
 }
 
 .footer-link:hover, .footer-link:focus, .footer-link-secodary:hover, .footer-link-secodary:focus {
-    color:$white;
+    color:$colortextblue;
 }
 
 .footer-copy .uk-icon{
@@ -63,5 +59,22 @@
 
 .ab-hr-footer{
     border-top-color: #ffffff;
+}
+
+.social-button-footer {
+    text-decoration: none !important;
+}
+
+.social-button-footer:hover {
+    color: $colortextblue !important;
+    text-decoration: underline !important;
+}
+
+@media only screen
+and (device-width: 428px)
+and (device-height: 926px) {
+    .social-button-footer {
+        font-size: 13px !important;
+    }
 }
 
