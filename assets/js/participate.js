@@ -104,11 +104,17 @@ $(document).ready(function () {
                     },
                 },
                 submitHandler: function(form) {
-                    console.log(form);
+                    $('#next-button-binance').hide();
+                    let $save = $('#button-save-binance')
+                    $save.show();
+                    form.submit()
+                    $('#form_first_step').hide();
+                    $('#file_import_binance').show();
                 }
             })
             $binanceNextButton.click(function (e) {
-                if (!$('#form-participate').valid()) {
+                if (!$('#form-participate').valid(e)) {
+                    console.log(e)
                     return;
                 } else {
                         $('#next-button-binance').hide();
