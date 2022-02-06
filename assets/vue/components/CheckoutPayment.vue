@@ -81,15 +81,24 @@ export default {
                         quantity : ticketNumber
                     });
                 },
-                onApprove: async (data, actions) => {
-                    let $form = $('#form-participate');
-                    let $url = $form.data('url');
-                    this.paidFor = true;
-                    return await actions.order.capture().then(function(details) {
-                        alert('Transaction completed by ' + details.payer.name.given_name);
+                onApprove: function(data, actions) {
+                    return actions.order.capture().then(function(orderData) {
+                        let $form = $('#form-participate');
+                        let $url = $form.data('url');
+                        alert('Transaction completed by ' + details.value.subscriber.name);
                         TelegameCommon.Ajax('POST', $url, $form.serialize(), 'json')
                         $('#modal_checkout_payment').hide();
-                    })
+                        // Successful capture! For demo purposes:
+                        console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+                        var transaction = orderData.purchase_units[0].payments.captures[0];
+                        alert('Transaction '+ transaction.status + ': ' + transaction.id + '\n\nSee console for all available details');
+
+                        // Replace the above to show a success message within this page, e.g.
+                        // const element = document.getElementById('paypal-button-container');
+                        // element.innerHTML = '';
+                        // element.innerHTML = '<h3>Thank you for your payment!</h3>';
+                        // Or go to another URL:  actions.redirect('thank_you.html');
+                    });
                 },
                 onError: err => {
                     console.log(err);

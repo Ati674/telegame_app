@@ -75,6 +75,15 @@ class FrontController extends AbstractController
     }
 
     /**
+     * @Route("/conditions-generales", name="conditions_generales")
+     */
+    public function conditionsGenerales()
+    {
+
+        return $this->render('front/conditions_generales.html.twig');
+    }
+
+    /**
      * @Route("/render-form-participate", name="render_form_participate")
      * @param Request $request
      * @return JsonResponse
