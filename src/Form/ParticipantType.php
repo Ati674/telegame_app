@@ -71,6 +71,13 @@ class ParticipantType extends AbstractType
                 ],
                 'required' => true,
             ))
+            ->add('agreeCondition', CheckboxType::class, array(
+                'mapped' => false,
+                'label_attr' => [
+                    'class' => 'col-lg-8'
+                ],
+                'label' => 'Accepter les conditions d\'utilisation'
+            ))
             ->add('imageFile', VichImageType::class, [
                 'attr' => ['class' => 'uk-input uk-form-width-medium'],
                 'required' => false,

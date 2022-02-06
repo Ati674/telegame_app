@@ -89,7 +89,7 @@ export default {
                     return actions.order.capture().then(function(details) {
                         alert('Transaction completed by ' + details.payer.name.given_name);
                         TelegameCommon.Ajax('POST', $url, $form.serialize(), 'json')
-                        this.closeModal();
+                        $('#modal_checkout_payment').hide();
                     })
                 },
                 onError: err => {
