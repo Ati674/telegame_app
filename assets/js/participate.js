@@ -84,20 +84,38 @@ $(document).ready(function () {
             $('#div-form').addClass('card-binance');
             let $binanceNextButton = $('#binance-div—content');
             $binanceNextButton.show()
+
+            $("#form-participate").validate({
+                errorClass: 'is-invalid',
+                validClass:'is-valid',
+                rules: {
+                    "participant[email]":{
+                        "required": true
+                    },
+                    "participant[nom]": {
+                        "email": true,
+                    },
+                    "participant[telegram]": {
+                        "required": true
+                    },
+                    "participant[ticketNumber]": {
+                        "required": true,
+                        "min": 10
+                    },
+                },
+                submitHandler: function(form) {
+                    console.log(form);
+                }
+            })
             $binanceNextButton.click(function (e) {
                 if (!$('#form-participate').valid()) {
                     return;
                 } else {
-                    let inputTicketNumber = $('#participant_ticketNumber').val()
-                    if (inputTicketNumber === '' || inputTicketNumber < 10) {
-                        alert('Veuillez choisir un nombre de ticket supérieur ou égal à 10 pour le paiement crypto !')
-                    } else {
                         $('#next-button-binance').hide();
                         let $save = $('#button-save-binance')
                         $save.show();
                         $('#form_first_step').hide();
                         $('#file_import_binance').show();
-                    }
                 }
 
             });
