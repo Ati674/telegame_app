@@ -82,11 +82,10 @@ export default {
                     });
                 },
                 onApprove: async (data, actions) => {
-                    const order = await actions.order.capture();
                     let $form = $('#form-participate');
                     let $url = $form.data('url');
                     this.paidFor = true;
-                    return actions.order.capture().then(function(details) {
+                    return await actions.order.capture().then(function(details) {
                         alert('Transaction completed by ' + details.payer.name.given_name);
                         TelegameCommon.Ajax('POST', $url, $form.serialize(), 'json')
                         $('#modal_checkout_payment').hide();

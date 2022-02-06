@@ -34,9 +34,11 @@
         "copy-webpack-plugin": "^10.2.1",
         "jquery": "^3.6.0",
         "jquery-validation": "^1.19.3",
+        "notifyjs": "^3.0.0",
         "uikit": "^3.10.1",
         "vue": "^2.6.14",
         "vue-backtotop": "^1.6.1",
+        "vue-notification": "^1.3.20",
         "vuikit": "^0.8.10"
     }
 }

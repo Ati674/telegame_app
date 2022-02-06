@@ -10,6 +10,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import Vuikit from 'vuikit'
 import VuikitIcons from '@vuikit/icons'
+import Notifications from 'vue-notification'
 
 // import '../scss/vue.scss'
 
@@ -18,7 +19,12 @@ Vue.use(BootstrapVue)
 // Optionally install the BootstrapVue icon components plugin
 Vue.use(IconsPlugin)
 
+/*
+or for SSR:
+import Notifications from 'vue-notification/dist/ssr.js'
+*/
 
+Vue.use(Notifications)
 Vue.use(Vuikit)
 Vue.use(VuikitIcons)
 Vue.component("vue-cookie-accept-decline", VueCookieAcceptDecline);
