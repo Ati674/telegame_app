@@ -43,7 +43,8 @@ export default {
     },
     mounted: function() {
         loadScript({
-            "client-id": 'AQkyvOTSZylKuY3dwGhQugbzR2tzknBIoNg44CPX8QMlY_U8IOjmpLzCyjGP1yINqnT_o3cgc89DL1ak',
+            //"client-id": 'AQkyvOTSZylKuY3dwGhQugbzR2tzknBIoNg44CPX8QMlY_U8IOjmpLzCyjGP1yINqnT_o3cgc89DL1ak',
+            "client-id": 'Ab_pFLt376S1ti82vgTI2tLsykgqerREKLRQkzLJC4I1Fp2qfUnl2aNV8VlWwbZYA1h-IszdIlZV7juL',
             "currency" : "EUR",
             "vault" : true,
             "intent" : "subscription"
@@ -77,28 +78,21 @@ export default {
                 },
                 createSubscription: function(data, actions) {
                     return actions.subscription.create({
-                        plan_id: 'P-21U53196GP375404KMH6ZEHY',
+                        plan_id: 'P-6R4639460B881225WMH4W3VI',
+                        // plan_id: 'P-21U53196GP375404KMH6ZEHY',
                         quantity : ticketNumber
                     });
                 },
                 onApprove: function(data, actions) {
-                    return actions.order.capture().then(function(orderData) {
-                        let $form = $('#form-participate');
-                        let $url = $form.data('url');
-                        alert('Transaction completed by ' + details.value.subscriber.name);
-                        TelegameCommon.Ajax('POST', $url, $form.serialize(), 'json')
-                        $('#modal_checkout_payment').hide();
-                        // Successful capture! For demo purposes:
-                        console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
-                        var transaction = orderData.purchase_units[0].payments.captures[0];
-                        alert('Transaction '+ transaction.status + ': ' + transaction.id + '\n\nSee console for all available details');
-
-                        // Replace the above to show a success message within this page, e.g.
-                        // const element = document.getElementById('paypal-button-container');
-                        // element.innerHTML = '';
-                        // element.innerHTML = '<h3>Thank you for your payment!</h3>';
-                        // Or go to another URL:  actions.redirect('thank_you.html');
-                    });
+                    let $form = $('#form-participate');
+                    let $url = $form.data('url');
+                    console.log(
+                        "Transaction completed",
+                    )
+                    TelegameCommon.Ajax('POST', $url, $form.serialize(), 'json')
+                    $('#modal_checkout_payment').hide();
+                    // Successful capture! For demo purposes:
+                    console.log('Capture result', data);
                 },
                 onError: err => {
                     console.log(err);

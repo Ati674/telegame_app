@@ -1,5 +1,5 @@
 #footer {
-    background: linear-gradient(208deg, rgba(86,193,255,1) 2%, rgba(0,118,186,1) 98%) no-repeat;
+    // background: linear-gradient(208deg, rgba(86,193,255,1) 2%, rgba(0,118,186,1) 98%) no-repeat;
     padding: 15px 10px;
     position: relative;
     bottom: 0;
@@ -69,12 +69,24 @@
     color: $colortextblue !important;
     text-decoration: underline !important;
 }
-
+.wave-footer {
+    margin-bottom: -140px
+}
 @media only screen
 and (device-width: 428px)
 and (device-height: 926px) {
     .social-button-footer {
         font-size: 13px !important;
+    }
+
+    .wave-footer {
+        margin-bottom: -19px
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .wave-footer {
+        margin-bottom: -36px
     }
 }
 
