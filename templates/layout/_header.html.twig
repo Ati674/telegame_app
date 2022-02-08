@@ -3,16 +3,12 @@
         <div class="col-lg-4 mt-5 div-button-social">
             <div class="row offset-lg-1" style="width: 287px; height: 64px;">
                 <a href="https://t.me/telegamefr" target="_blank" class="ab-button-next-form m-2 p-2 div-button-social">
-                    <img src="https://img.icons8.com/color/48/000000/telegram-app--v1.png" class="position-absolute" style="left: 50px;
-    top: 67px;
-    width: 45px;" width="30" alt="telegram_logo" /> &nbsp;<span class="text-social-button">&nbsp; &nbsp;rejoindre le canal &nbsp;</span></a>
+                    <img src="{{ asset('build/images/Telegram_2019_Logo.svg.png') }}" class="position-absolute" style="left: 50px;top: 67px;width: 45px;" width="30" alt="telegram_logo" /> &nbsp;<span class="text-social-button">&nbsp; &nbsp;rejoindre le canal &nbsp;</span></a>
             </div>
             <div class="row offset-lg-1" style="width: 287px;">
                 <a href="https://www.instagram.com/telegame_fr/?hl=fr" target="_blank" class="ab-button-next-form m-2 p-2 div-button-social">
                     <img src="{{ asset('build/images/instagram.png') }}" width="30" alt="instagram_logo"
-                         class="position-absolute" style="left: 54px;
-    top: 134px;
-    width: 38px;"/> <span class="text-social-button">&nbsp; &nbsp;suivre instagram</span></a>
+                         class="position-absolute" style="left: 50px; top: 130px; width: 45px;"/> <span class="text-social-button">&nbsp; &nbsp;suivre instagram</span></a>
             </div>
         </div>
         <div class="col-lg-5">
@@ -33,8 +29,8 @@
         </div>
     </div>
     {% if 'front_home' in app.request.attributes.get('_route') %}
-    <div class="row m-0" style="width: 100%">
-        <img src="{{ asset('build/images/text_header_center.png') }}" alt="text" >
+    <div class="row m-0" style="width: 100%; height: 100px">
+        <img src="{{ asset('build/images/text_header_center.png') }}" alt="text" style="position: relative; top: -70px;">
     </div>
 {% endif %}
 
