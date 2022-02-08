@@ -135,7 +135,6 @@ class FrontController extends AbstractController
                 $participant->getTelegram(),
             ];
 
-            $this->addFlash('success', 'Participation prise en compte avec succès !');
             $mailer->sendEmail(
                 'Participation prise en compte !',
                 $participant->getEmail(),

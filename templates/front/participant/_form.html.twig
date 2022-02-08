@@ -40,13 +40,16 @@
 
                 <div id="file_import_binance" style="display: none;">
                     <div class="row">
-                        <p class="col-6 ab-color-telegram-text">Étape 2 (10 tickets minimum)</p>
-                        <p class="col-6">Réseau: TRON (TRC20)</p>
-                        <img class="col-9 offset-1" src="{{ asset('build/images/qr_code_binance.png') }}"
+                        <p class="col-lg-7 ab-color-telegram-text">Étape 2 (10 tickets mini)</p>
+                        <p class="col-lg-5">Réseau: <br> TRON (TRC20)</p>
+                    </div>
+                    <div class="row">
+                    <img class="col-9 offset-1" src="{{ asset('build/images/qr_code_binance.png') }}"
                                 {{ stimulus_controller('symfony/ux-lazy-image/lazy-image') }}
                              alt="QR Code Binance Wallet" width="200">
-                        <code class="col-10 offset-1">TViRzRVkmv4EjdcngtZ89A7RnX5JhYCjFr</code>
-                        <p class="col-10 offset-1">CRYPTO: USDT</p>
+                    </div>
+                    <div class="row">
+                        <p class="col-lg-2">USDT</p><code class="col-lg-8" style="font-size: 13px">TViRzRVkmv4EjdcngtZ89A7RnX5JhYCjFr</code>
                     </div>
 
                     <div class="row">

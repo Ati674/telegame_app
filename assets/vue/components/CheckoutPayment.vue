@@ -23,6 +23,7 @@
 
 import {TelegameCommon} from "../../js/AjaxRequest";
 import { loadScript } from "@paypal/paypal-js";
+import {successCallback} from "../../js/app";
 
 export default {
     name: "CheckoutPayment",
@@ -89,10 +90,10 @@ export default {
                     console.log(
                         "Transaction completed",
                     )
-                    TelegameCommon.Ajax('POST', $url, $form.serialize(), 'json')
+                    TelegameCommon.Ajax('POST', $url, $form.serialize(), 'json', successCallback)
                     $('#modal_checkout_payment').hide();
                     // Successful capture! For demo purposes:
-                    console.log('Capture result', data);
+                    console.log('Capture result', data, actions);
                 },
                 onError: err => {
                     console.log(err);
@@ -100,7 +101,7 @@ export default {
         },
         closeModal() {
             $('#modal_checkout_payment').hide();
-        }
+        },
     }
 }
 </script>

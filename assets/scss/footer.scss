@@ -72,13 +72,21 @@
 .wave-footer {
     margin-bottom: -140px
 }
+
+.footer-network-position-instagram {
+    left: 732px;
+    top: 27px;
+    width: 39px;
+}
+.footer-network-position-telegram {
+    left: 414px;
+    top: 23px;
+    width: 45px;
+}
+
 @media only screen
 and (device-width: 428px)
 and (device-height: 926px) {
-    .social-button-footer {
-        font-size: 13px !important;
-    }
-
     .wave-footer {
         margin-bottom: -19px
     }
@@ -87,6 +95,17 @@ and (device-height: 926px) {
 @media screen and (max-width: 640px) {
     .wave-footer {
         margin-bottom: -36px
+    }
+
+    .footer-network-position-instagram {
+        left: 18px;
+        top: 88px;
+        width: 39px;
+    }
+    .footer-network-position-telegram {
+        left: 15px;
+        top: 23px;
+        width: 45px;
     }
 }
 

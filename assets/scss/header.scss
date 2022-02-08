@@ -1,7 +1,7 @@
 #yellow_circle {
     position: relative;
     width: 504px;
-    top: -147px;
+    top: -180px;
     left: -47px;
 }
 
@@ -16,23 +16,25 @@
 #yellow_square {
     position: relative;
     width: 386px;
-    left: 25px;
+    left: 28px;
+    top: -36px;
 }
 #text_droite {
     color: white;
     position: absolute;
-    left: 1220px;
+    left: 1194px;
     font-size: 30px;
-    width: 187px;
-    top: 75px;
+    width: 234px;
+    top: 72px;
+    line-height: 33px;
 }
 
 #logo_telegame {
     position: relative;
     z-index: 0;
-    top: -467px;
-    width: 242px;
-    left: -53px;
+    top: -440px;
+    width: 200px;
+    left: -49px;
 }
 
 .text-social-button_telegram, .text-social-button_instagram {
@@ -77,10 +79,11 @@
     #text_droite {
         color: white;
         position: absolute;
-        left: 313px;
+        left: 309px;
         font-size: 10px;
-        width: 65px;
-        top: 18px;
+        width: 77px;
+        top: 29px;
+        line-height: 10px;
     }
 
     #logo_telegame {
@@ -93,6 +96,27 @@
 
     .row-div {
         height: 120px;
+    }
+
+    .text-social-button_telegram, .text-social-button_instagram {
+        display: unset;
+    }
+
+    .text-social-button_telegram {
+        text-decoration: none;
+        position: absolute;
+        left: 24px;
+        top: 4px;
+        width: 50px;
+        height: 50px;
+    }
+    .text-social-button_instagram {
+        text-decoration: none;
+        position: absolute;
+        left: 27px;
+        top: 68px;
+        width: 50px;
+        height: 50px;
     }
 }
 
@@ -132,18 +156,19 @@ and (device-height: 926px) {
     #text_droite {
         color: white;
         position: absolute;
-        left: 349px;
+        left: 346px;
         font-size: 10px;
-        width: 65px;
-        top: 18px;
+        width: 77px;
+        top: 29px;
+        line-height: 10px;
     }
 
     #logo_telegame {
         position: relative;
         z-index: 0;
-        top: -36px;
-        width: 80px;
-        left: -73px;
+        top: -28px;
+        width: 71px;
+        left: -68px;
     }
 
     .row-div {
