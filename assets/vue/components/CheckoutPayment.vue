@@ -44,8 +44,8 @@ export default {
     },
     mounted: function() {
         loadScript({
-            //"client-id": 'AQkyvOTSZylKuY3dwGhQugbzR2tzknBIoNg44CPX8QMlY_U8IOjmpLzCyjGP1yINqnT_o3cgc89DL1ak',
-            "client-id": 'Ab_pFLt376S1ti82vgTI2tLsykgqerREKLRQkzLJC4I1Fp2qfUnl2aNV8VlWwbZYA1h-IszdIlZV7juL',
+            "client-id": 'AR49OLf35dwcqziqPQdwcGeQgkQrFqhbE-yLZzoSGnrMmj_MQcKRcOYczxYqVPVk1zKVrQzJLPKFCFIn',
+            //"client-id": 'Ab_pFLt376S1ti82vgTI2tLsykgqerREKLRQkzLJC4I1Fp2qfUnl2aNV8VlWwbZYA1h-IszdIlZV7juL',
             "currency" : "EUR",
             "vault" : true,
             "intent" : "subscription"
@@ -79,7 +79,7 @@ export default {
                 },
                 createSubscription: function(data, actions) {
                     return actions.subscription.create({
-                        plan_id: 'P-6R4639460B881225WMH4W3VI',
+                        plan_id: 'P-21U53196GP375404KMH6ZEHY',
                         // plan_id: 'P-21U53196GP375404KMH6ZEHY',
                         quantity : ticketNumber
                     });
