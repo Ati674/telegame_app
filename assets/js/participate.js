@@ -158,7 +158,7 @@ $(document).ready(function () {
                 formBinance.scroll();
                 $('html, body').animate({
                     scrollTop: formBinance.offset().top
-                }, 100);
+                }, 500);
                 break;
             case 'paypal':
                 // CB Component
@@ -174,7 +174,7 @@ $(document).ready(function () {
                 formPaypal.toggle().html(response.content);
                 $('html, body').animate({
                     scrollTop: formPaypal.offset().top
-                }, 100);
+                }, 500);
                 break;
             case 'cb':
                 // Paypal Component
@@ -190,7 +190,7 @@ $(document).ready(function () {
                 formCb.toggle().html(response.content);
                 $('html, body').animate({
                     scrollTop: formCb.offset().top
-                }, 100);
+                }, 500);
                 break;
         }
     }
