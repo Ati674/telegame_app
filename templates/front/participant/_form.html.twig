@@ -59,10 +59,10 @@
                             {% if form.vars.value.image is not null %}
                                 <div><img src="/assets/images/participants/{{ form.vars.value.image }}" class="ab-participant-logo" /> </div>
                             {% endif %}
-                            <div uk-form-custom="target: true" class="row">
+                            <div uk-form-custom="target: true" class="row justify-content-center">
                                 {{ form_widget(form.imageFile) }}
+                                <button class="text-center ab-button-next-form w-50">Télécharger</button>
                                 <input class="uk-input uk-form-width-medium col-4" type="text" placeholder="Select file" >
-                                <button class="ab-button-next-form w-50">Télécharger</button>
                             </div>
                         </div>
                     </div>
