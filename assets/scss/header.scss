@@ -296,3 +296,22 @@ and (device-height: 1080px) {
         top: -36px;
     }
 }
+@media only screen
+and (device-width: 375px)
+and (device-height: 667px) {
+    #text_droite {
+        color: #fff;
+        font-size: 12px;
+        left: 270px;
+        line-height: 12px;
+        position: absolute;
+        top: 39px;
+        width: 97px;
+    }
+
+    #yellow_square {
+        left: 137px;
+        top: -155px;
+        width: 123px;
+    }
+}
