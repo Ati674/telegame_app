@@ -7,11 +7,10 @@
   position: relative;
   left: -38px;
 }
-@media screen and (max-width: 767px) {
-  .card-paypal {
-    width: 300px;
-    left: 37px;
-  }
+.card-cb {
+  width: 450px;
+  position: relative;
+  left: -38px;
 }
 
 .card-binance {
@@ -19,22 +18,88 @@
   position: relative;
   left: -38px;
 }
+
 @media screen and (max-width: 767px) {
   .card-binance {
     width: 300px;
     left: 37px;
   }
-}
-
-.card-cb {
-  width: 450px;
-  position: relative;
-  left: -38px;
-}
-@media screen and (max-width: 767px) {
   .card-cb {
+    width: 300px;
+    left: 37px;
+  }
+  .card-paypal {
     width: 300px;
     left: 37px;
   }
 }
 
+// GALAXY S20
+@media only screen
+and (device-width: 412px)
+and (device-height: 915px) {
+  .card-binance {
+    width: 300px;
+    left: 46px;
+  }
+  .card-cb {
+    width: 300px;
+    left: 46px;
+  }
+  .card-paypal {
+    width: 300px;
+    left: 46px;
+  }
+}
+// IPHONE SE
+@media only screen
+and (device-width: 375px)
+and (device-height: 667px) {
+  .card-binance {
+    width: 300px;
+    left: 26px;
+  }
+  .card-cb {
+    width: 300px;
+    left: 26px;
+  }
+  .card-paypal {
+    width: 300px;
+    left: 26px;
+  }
+}
+
+// IPHONE SE
+@media only screen
+and (device-width: 414px)
+and (device-height: 896px) {
+  .card-binance {
+    width: 300px;
+    left: 42px;
+  }
+  .card-cb {
+    width: 300px;
+    left: 42px;
+  }
+  .card-paypal {
+    width: 300px;
+    left: 42px;
+  }
+}
+// IPHONE 12 PRO MAX
+@media only screen
+and (device-width: 428px)
+and (device-height: 926px) {
+  .card-binance {
+    width: 300px;
+    left: 52px;
+  }
+  .card-cb {
+    width: 300px;
+    left: 52px;
+  }
+  .card-paypal {
+    width: 300px;
+    left: 52px;
+  }
+}
