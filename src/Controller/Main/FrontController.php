@@ -57,14 +57,13 @@ class FrontController extends AbstractController
                     $participant->getTicketNumber(),
                     $participant->getTelegram(),
                 ];
-
-                $this->addFlash('success', 'Participation prise en compte avec succès !');
                 $mailer->sendEmail('Participation prise en compte !', $participant->getEmail(), 'inscription', $datas);
 
+                $this->addFlash('success', 'Participation prise en compte avec succès !');
                 return $this->redirectToRoute('front_home');
             } catch (\Exception $exception) {
-                $this->addFlash('danger', 'Un problème est survenu contacter un administateur !');
-                // $this->addFlash('danger', $exception->getMessage());
+                //$this->addFlash('danger', 'Un problème est survenu contacter un administateur !');
+                 $this->addFlash('danger', $exception->getMessage());
             }
         }
 

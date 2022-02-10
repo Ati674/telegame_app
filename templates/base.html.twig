@@ -62,7 +62,7 @@
     {% if 'front_' in app.request.attributes.get('_route') %}
         {% include 'layout/_header.html.twig' %}
     {% endif %}
-    <div>
+    <div class="mb-5">
         {% block body %}
         {% endblock %}
         <div id="app"></div>

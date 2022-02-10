@@ -67,7 +67,7 @@ class ParticipantType extends AbstractType
                 ],
                 'label' => 'Nombre de tickets souhaités:',
                 'label_attr' => [
-                    'class' => 'col-lg-8'
+                    'class' => 'col-lg-6'
                 ],
                 'required' => true,
             ))

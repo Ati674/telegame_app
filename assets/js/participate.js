@@ -3,6 +3,10 @@ import CheckoutPaymentClick from "../vue/components/CheckoutPaymentClick";
 import Vue from "vue";
 
 $(document).ready(function () {
+    jQuery.extend(jQuery.validator.messages, {
+        required: "Requis !",
+        min: jQuery.validator.format("Ticket supérieur ou égal à {0}.")
+    });
     $('.button-rendering-form-paypal').click(function (e) {
         let $url = $(this).data('path');
         e.preventDefault();
@@ -60,7 +64,6 @@ $(document).ready(function () {
                         }
                     }),
             }).$mount('#next-button-div')
-
         }
     });
 
@@ -117,11 +120,11 @@ $(document).ready(function () {
                     console.log(e)
                     return;
                 } else {
-                        $('#next-button-binance').hide();
-                        let $save = $('#button-save-binance')
-                        $save.show();
-                        $('#form_first_step').hide();
-                        $('#file_import_binance').show();
+                    $('#next-button-binance').hide();
+                    let $save = $('#button-save-binance')
+                    $save.show();
+                    $('#form_first_step').hide();
+                    $('#file_import_binance').show();
                 }
 
             });
@@ -149,9 +152,13 @@ $(document).ready(function () {
                 formPaypal.hide().html('');
 
                 // Binance
-                iconBinance.show();
-                formBinance.show().html(response.content);
+                iconBinance.toggle();
+                formBinance.toggle().html(response.content);
                 $('#mini-ticket-span').show()
+                formBinance.scroll();
+                $('html, body').animate({
+                    scrollTop: formBinance.offset().top
+                }, 100);
                 break;
             case 'paypal':
                 // CB Component
@@ -163,8 +170,11 @@ $(document).ready(function () {
                 formBinance.hide().html('');
 
                 // Paypal
-                iconPaypal.show();
-                formPaypal.show().html(response.content);
+                iconPaypal.toggle();
+                formPaypal.toggle().html(response.content);
+                $('html, body').animate({
+                    scrollTop: formPaypal.offset().top
+                }, 100);
                 break;
             case 'cb':
                 // Paypal Component
@@ -176,8 +186,11 @@ $(document).ready(function () {
                 formBinance.hide().html('');
 
                 // CB
-                iconCb.show();
-                formCb.show().html(response.content);
+                iconCb.toggle();
+                formCb.toggle().html(response.content);
+                $('html, body').animate({
+                    scrollTop: formCb.offset().top
+                }, 100);
                 break;
         }
     }

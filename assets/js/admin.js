@@ -3,8 +3,6 @@ import '../scss/admin.scss';
 import {TelegameCommon} from "./AjaxRequest";
 import UIkit from "uikit";
 
-
-
 $(document).ready( function () {
    $('.validate_payment').click(function (e) {
       let $this = $(this);

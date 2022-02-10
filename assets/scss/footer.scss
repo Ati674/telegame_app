@@ -109,3 +109,20 @@ and (device-height: 926px) {
     }
 }
 
+@media only screen
+and (device-width: 1920px)
+and (device-height: 1080px) {
+
+    .footer-network-position-instagram {
+        left: 1119px;
+        top: 23px;
+        width: 46px;
+    }
+
+    .footer-network-position-telegram {
+        left: 505px;
+        top: 24px;
+        width: 45px;
+    }
+}
+

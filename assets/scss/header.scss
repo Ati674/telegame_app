@@ -5,10 +5,20 @@
     left: -47px;
 }
 
-.obient-ton-ticket {
-    position: relative;
-    top: -350px;
+.is-invalid {
+    color: red;
+    font-size: 10px;
 }
+
+.obient-ton-ticket-pc {
+    position: absolute;
+    top: 320px;
+}
+
+.obient-ton-ticket-mobile {
+    display: none;
+}
+
 .row-div {
     height: 350px;
 }
@@ -65,11 +75,9 @@
     }
 
     #yellow_square {
-        /* position: relative; */
-        width: 98px;
-        /* height: 152px; */
+        width: 123px;
         top: -155px;
-        left: 158px;
+        left: 147px;
     }
 
     .div-button-social {
@@ -83,11 +91,11 @@
     #text_droite {
         color: white;
         position: absolute;
-        left: 309px;
-        font-size: 10px;
-        width: 77px;
-        top: 29px;
-        line-height: 10px;
+        left: 289px;
+        font-size: 12px;
+        width: 97px;
+        top: 39px;
+        line-height: 12px;
     }
 
     #logo_telegame {
@@ -101,9 +109,14 @@
     .row-div {
         height: 120px;
     }
-    .obient-ton-ticket {
+    .obient-ton-ticket-pc {
+        display:none;
+    }
+
+    .obient-ton-ticket-mobile {
+        display: unset;
         position: relative;
-        top: -44px;
+        top: 31px;
     }
 
     .text-social-button_telegram, .text-social-button_instagram {
@@ -150,11 +163,15 @@ and (device-height: 926px) {
     }
 
     #yellow_square {
-        /* position: relative; */
-        width: 98px;
-        /* height: 152px; */
-        top: -155px;
-        left: 179px;
+        width: 120px;
+        top: -156px;
+        left: 167px;
+    }
+
+    .obient-ton-ticket-mobile {
+        display: unset;
+        position: relative;
+        top: 31px;
     }
 
     .squared-div {
@@ -164,11 +181,11 @@ and (device-height: 926px) {
     #text_droite {
         color: white;
         position: absolute;
-        left: 346px;
-        font-size: 10px;
-        width: 77px;
-        top: 29px;
-        line-height: 10px;
+        left: 324px;
+        font-size: 12px;
+        width: 98px;
+        top: 35px;
+        line-height: 12px;
     }
 
     #logo_telegame {
@@ -201,5 +218,81 @@ and (device-height: 926px) {
         top: 68px;
         width: 50px;
         height: 50px;
+    }
+}
+@media only screen
+and (device-width: 414px)
+and (device-height: 896px) {
+    #text_droite {
+        color: white;
+        position: absolute;
+        left: 308px;
+        font-size: 12px;
+        width: 97px;
+        top: 39px;
+        line-height: 12px;
+    }
+
+    #yellow_square {
+        width: 123px;
+        top: -155px;
+        left: 158px;
+    }
+}
+
+@media only screen
+and (device-width: 412px)
+and (device-height: 915px) {
+    #text_droite {
+        color: white;
+        position: absolute;
+        left: 307px;
+        font-size: 12px;
+        width: 97px;
+        top: 39px;
+        line-height: 12px;
+    }
+
+    #yellow_square {
+        width: 123px;
+        top: -155px;
+        left: 157px;
+    }
+}
+
+@media only screen
+and (device-width: 1920px)
+and (device-height: 1080px) {
+
+    #logo_telegame {
+        position: relative;
+        z-index: 0;
+        top: -129px;
+        width: 200px;
+        left: -316px;
+    }
+
+    #yellow_circle {
+        position: relative;
+        width: 504px;
+        top: -214px;
+        left: 37px;
+    }
+
+    #text_droite {
+        color: white;
+        position: absolute;
+        left: 1632px;
+        font-size: 30px;
+        width: 249px;
+        top: 72px;
+        line-height: 33px;
+    }
+
+    #yellow_square {
+        position: relative;
+        width: 386px;
+        left: 59px;
+        top: -36px;
     }
 }

@@ -1,10 +1,10 @@
 {{ form_start(form, { 'attr' : { 'id' : 'form-participate', 'class' : 'needs-validation', 'data-url' : path('front_done_participate') } }) }}
-<div id="div-form" class="uk-card uk-card-default">
+<div id="div-form" class="uk-card uk-card-default" xmlns="http://www.w3.org/1999/html">
     <div class="uk-card-body p-3">
         <div class="form-fields">
             <div class="uk-text-left ab-color-telegram-text uk-text-bold">
                 <div id="form_first_step">
-                    <p class="uk-legend uk-text-center">Étape 1 <span id="mini-ticket-span" style="display: none;">(10 tickets minimum)</span></p>
+                    <p class="uk-legend uk-text-center">Étape 1 <span id="mini-ticket-span" style="display: none; font-size: 12px"><br>*10 tickets minimum</span></p>
 
                     <div class="form-group row m-1">
                         {{ form_label(form.email) }}
@@ -26,13 +26,13 @@
                     </div>
                     <div class="form-group row m-1">
                         {{ form_label(form.ticketNumber) }}
-                        <div class="col-lg-4">
+                        <div class="col-lg-6">
                             {{ form_widget(form.ticketNumber) }}
                         </div>
                     </div>
                     <div class="form-group row m-1">
-                        <span style="font-size: 14px" class="col-lg-8">{{ form_label(form.agreeCondition) }}</span>
-                        <div class="col-lg-4">
+                        <div class="col-md-12">
+                        <span style="font-size: 14px" class="col-lg-10">{{ form_label(form.agreeCondition) }}</span>
                             {{ form_widget(form.agreeCondition) }}
                         </div>
                     </div>
@@ -40,17 +40,18 @@
 
                 <div id="file_import_binance" style="display: none;">
                     <div class="row">
-                        <p class="col-lg-7 ab-color-telegram-text">Étape 2 (10 tickets mini)</p>
-                        <p class="col-lg-5">Réseau: <br> TRON (TRC20)</p>
+                        <p class="uk-legend uk-text-center">Étape 2 <span style="font-size: 12px"><br>*10 tickets minimum</span></p>
                     </div>
                     <div class="row">
-                    <img class="col-9 offset-1" src="{{ asset('build/images/qr_code_binance.png') }}"
+                        <img class="col-8 offset-2" src="{{ asset('build/images/qr_code_binance.png') }}"
                                 {{ stimulus_controller('symfony/ux-lazy-image/lazy-image') }}
                              alt="QR Code Binance Wallet" width="200">
-                        <small style="font-size: 10px">Envoyez seulement des USDT sur cette adresse de dépôt.</small>
+                        <small class="text-center mt-2" style="font-size: 10px">Envoyez seulement des USDT sur cette adresse de dépôt.</small>
+                        <p class="text-center mt-3">Réseau: TRON (TRC20)</p>
+
                     </div>
-                    <div class="row">
-                        <p class="col-lg-2">USDT</p><code class="col-lg-8" style="font-size: 13px">TViRzRVkmv4EjdcngtZ89A7RnX5JhYCjFr</code>
+                    <div class="row mt-2 mb-3">
+                        <p class="col-lg-2">USDT</p><code class="col-lg-8" style="font-size: 13px; color: black;">TViRzRVkmv4EjdcngtZ89A7RnX5JhYCjFr</code>
                     </div>
 
                     <div class="row">
@@ -73,7 +74,7 @@
     <div class="uk-card-footer">
         <div id="binance-div—content" style="display: none">
             <button class="ab-button-next-form" id="next-button-binance" type="button">Suivant</button>
-            <button class="uk-button uk-button-primary yk-button-blue uk-align-right" type="submit" id="button-save-binance" style="display:none;">{{ button_label|default('Sauvegarder') }}</button>
+            <button class="ab-button-next-form uk-align-right" type="submit" id="button-save-binance" style="display:none;">{{ button_label|default('Sauvegarder') }}</button>
         </div>
         <div id="next-button-div"></div>
     </div>

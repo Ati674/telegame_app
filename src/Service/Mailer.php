@@ -32,6 +32,7 @@ class Mailer
             ->htmlTemplate("emails/" . $view . ".html.twig")
             ->context(['data' => $variables]);
         try {
+            dd($email);
             $this->mailer->send($email);
             return "Success";
         } catch (TransportExceptionInterface $e) {

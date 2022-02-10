@@ -30,7 +30,7 @@ export default {
     methods: {
         toggleComponent(e) {
             jQuery.extend(jQuery.validator.messages, {
-                required: "Ce champs est requis !",
+                required: "Requis !",
                 remote: "votre message",
                 email: "Entrez un e-mail valide !",
                 url: "votre message",
