@@ -4,6 +4,10 @@
     top: -223px;
     left: -47px;
 }
+.size-responsive-obtient {
+    width: 100%;
+    height: 100%;
+}
 
 .is-invalid {
     color: red;
@@ -11,8 +15,7 @@
 }
 
 .obient-ton-ticket-pc {
-    position: absolute;
-    top: 320px;
+    position: relative;
 }
 
 .obient-ton-ticket-mobile {
@@ -56,6 +59,10 @@
 }
 
 @media screen and (max-width: 640px) {
+    .size-responsive-obtient {
+        width: revert;
+    }
+
     body {
         width: 100%;
     }
