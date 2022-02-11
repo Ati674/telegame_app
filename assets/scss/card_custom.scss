@@ -85,7 +85,7 @@ and (device-height: 844px) {
     margin-left: 20px;
   }
 }
-// IPHONE 12
+// GALAXY 20
 @media only screen
 and (device-width: 412px)
 and (device-height: 915px) {
@@ -138,7 +138,7 @@ and (device-height: 667px) {
   }
 }
 
-// IPHONE SE
+// IPHONE XR
 @media only screen
 and (device-width: 414px)
 and (device-height: 896px) {
@@ -159,7 +159,9 @@ and (device-height: 896px) {
 @media only screen
 and (device-width: 428px)
 and (device-height: 926px) {
-
+  .uk-card {
+    border-radius: 30px;
+  }
   .card-size-layout {
     width: 150px;
     height: 150px;
