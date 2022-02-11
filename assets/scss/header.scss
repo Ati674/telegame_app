@@ -9,6 +9,19 @@
     height: 100%;
 }
 
+
+.img-social-insta {
+    left: 50px;
+    top: 130px;
+    width: 45px;
+}
+
+.img-social-telegram {
+    left: 50px;
+    top: 67px;
+    width: 45px;
+}
+
 .is-invalid {
     color: red;
     font-size: 10px;
@@ -151,6 +164,10 @@
 @media only screen
 and (device-width: 390px)
 and (device-height: 844px) {
+    .size-responsive-obtient {
+        margin-top: 21px;
+        margin-bottom: 68px;
+    }
     .obient-ton-ticket-mobile {
         display: unset;
         position: relative;
@@ -160,6 +177,10 @@ and (device-height: 844px) {
 @media only screen
 and (device-width: 428px)
 and (device-height: 926px) {
+    .size-responsive-obtient {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
     body {
         width: 100%;
     }
@@ -275,6 +296,14 @@ and (device-height: 915px) {
 @media only screen
 and (device-width: 1920px)
 and (device-height: 1080px) {
+
+    .img-social-insta {
+        left: 63px; top: 130px; width: 45px;
+    }
+
+    .img-social-telegram {
+        left: 63px;top: 67px;width: 45px;
+    }
 
     #logo_telegame {
         position: relative;
