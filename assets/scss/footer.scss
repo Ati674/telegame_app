@@ -98,13 +98,13 @@ and (device-height: 926px) {
     }
 
     .footer-network-position-instagram {
-        left: 18px;
-        top: 88px;
-        width: 39px;
+        left: 8px;
+        top: 87px;
+        width: 43px;
     }
     .footer-network-position-telegram {
-        left: 15px;
-        top: 23px;
+        left: 8px;
+        top: 24px;
         width: 45px;
     }
 }
@@ -121,6 +121,25 @@ and (device-height: 1080px) {
 
     .footer-network-position-telegram {
         left: 505px;
+        top: 24px;
+        width: 45px;
+    }
+}
+
+
+// IPHONE 12 PRO MAX
+@media only screen
+and (device-width: 428px)
+and (device-height: 926px) {
+
+    .footer-network-position-instagram {
+        left: 9px;
+        top: 86px;
+        width: 44px;
+    }
+
+    .footer-network-position-telegram {
+        left: 10px;
         top: 24px;
         width: 45px;
     }
