@@ -63,23 +63,6 @@
   }
 }
 
-// GALAXY S20
-@media only screen
-and (device-width: 412px)
-and (device-height: 915px) {
-  .card-binance {
-    width: 300px;
-    left: 46px;
-  }
-  .card-cb {
-    width: 300px;
-    left: 46px;
-  }
-  .card-paypal {
-    width: 300px;
-    left: 46px;
-  }
-}
 // IPHONE 12
 @media only screen
 and (device-width: 390px)
@@ -106,6 +89,19 @@ and (device-height: 844px) {
 @media only screen
 and (device-width: 412px)
 and (device-height: 915px) {
+  .card-binance {
+    width: 300px;
+    left: 46px;
+  }
+  .card-cb {
+    width: 300px;
+    left: 46px;
+  }
+  .card-paypal {
+    width: 300px;
+    left: 46px;
+  }
+
   .card-size-layout {
     width: 150px;
     height: 150px;
@@ -170,6 +166,7 @@ and (device-height: 926px) {
   }
   .logo-card-paypal {
     width: 78px;
+    margin-top: -6px;
   }
 
   .logo-card-cb {
@@ -179,7 +176,8 @@ and (device-height: 926px) {
 
   .logo-card-binance {
     width: 69px;
-    margin-left: 20px;
+    margin-left: 22px;
+    margin-top: -7px;
   }
   .card-binance {
     width: 300px;
